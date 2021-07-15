@@ -5,6 +5,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+*::selection {
+  background-color: $color-primary-light;
+  color: 88fff7;
+}
 
 body {
   font-size: 10px;
