@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 *::selection {
-  background-color: $color-primary-light;
+  background-color: #96baff;
   color: 88fff7;
 }
 
