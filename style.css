@@ -38,6 +38,7 @@ body::after {
   background: linear-gradient(#7c83fd, #96baff);
   -webkit-clip-path: circle(20% at 95% 100%);
           clip-path: circle(20% at 95% 100%);
+  z-index:-1;
 }
 
 .card__toggle {
