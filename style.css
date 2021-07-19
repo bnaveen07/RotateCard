@@ -40,6 +40,10 @@ body::after {
           clip-path: circle(20% at 95% 100%);
 }
 
+.card__toggle {
+  display: none;
+}
+
 .card {
   position: absolute;
   transform-style: preserve-3d;
@@ -71,12 +75,12 @@ body::after {
   transform: rotateY(180deg);
   background-image: linear-gradient(to right bottom, #88fff7, #7c83fd);
 }
-.card:hover .card__front {
+/* .card:hover .card__front {
   transform: rotateY(-180deg);
 }
 .card:hover .card__back {
   transform: rotateY(0);
-}
+} */
 .card__heading {
   font-size: 1.6rem;
   justify-content: center;
@@ -86,3 +90,29 @@ body::after {
   transform: translate(-50%, -50%);
   width: 80%;
 }/*# sourceMappingURL=style.css.map */
+
+@media screen and (min-width: 600px) {
+  .card:hover .card__front {
+    transform: rotateY(-180deg);
+  }
+  .card:hover .card__back {
+    transform: rotateY(0);
+  }
+}
+@media screen and (max-width: 600px) {
+  .checkbox__label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 450px;
+    z-index: 100;
+  }
+  .card__toggle:checked ~ .card__front {
+    transform: rotateY(-180deg);
+  }
+  .card__toggle:checked ~ .card__back {
+    transform: rotateY(0);
+  }
+}
